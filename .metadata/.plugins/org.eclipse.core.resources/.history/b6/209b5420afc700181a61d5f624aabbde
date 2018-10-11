@@ -1,0 +1,34 @@
+package com.google.ace;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet({ "/Cookie" })
+public class HelloServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	 private static int count = 0;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String path = "cookie-test.jsp";
+		// forward : 서블릿 클래스에서 브라우저에게 응답하는 것이 아니라
+		// JSP로 연동하여 JSP의 화면정보를 응답 문자열로 사용하는 방법이다.
+		RequestDispatcher rd = request.getRequestDispatcher(path);
+		rd.forward(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

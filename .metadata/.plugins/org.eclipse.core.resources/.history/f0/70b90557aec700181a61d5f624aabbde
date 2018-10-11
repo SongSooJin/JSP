@@ -1,0 +1,36 @@
+package com.google.ace;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/HelloServlet")
+public class HelloServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	// 앞서서 서블릿 프레임워크가 서블릿 클래스를 사용하여 객체를 만들고
+	// 서블릿 컨테이너에 보관한 다음, 새 스레드를 생성하고,
+	// 그 스레드가 라이프 사이클 메소드를 호출하고
+	// 그 후에 요청방식에 따라 연동 메소드를 호출하게 된다.
+	// 서블릿 객체는 싱글톤으로 관리된다. 그러므로 서블릿이 갖고 있는
+	// 상태 정보는 모든 스레드에게 공유된다.
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

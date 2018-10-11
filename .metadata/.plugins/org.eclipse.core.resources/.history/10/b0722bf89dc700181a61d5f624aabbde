@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>Hello world</h1>
+	<ul>
+		<li><a href="UserServlet">UserServlet</a></li>
+		<!-- 화면에 표시되고 있는 정보를 http://localhost:8080/1-hello-world/
+		주소로 받는경우, 다른링크는 해당 URL 문자열을 생략할 수있습니다.-->
+		<li><a href="users?nember=777">users</a></li>
+		<li><a href="showMeTheMoney">URL 패턴이 일치하는 정보가 없는 경우</a></li>
+	</ul>
+</body>
+
+</html>

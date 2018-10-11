@@ -1,0 +1,10 @@
+package com.example.demo.web;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet({"/" , "/emps"})
+public class EmpServlet {
+	
+	 
+
+}

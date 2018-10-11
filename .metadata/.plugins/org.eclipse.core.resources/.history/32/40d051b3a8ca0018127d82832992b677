@@ -1,0 +1,10 @@
+package com.example.vo;
+
+public class User {
+	private int id;
+	String firstName;
+	String lastName;
+	boolean active;
+}
+
+

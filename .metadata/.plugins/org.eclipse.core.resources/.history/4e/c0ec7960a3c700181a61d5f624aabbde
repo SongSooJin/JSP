@@ -1,0 +1,9 @@
+package com.google.ace;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet({ "/UserServlet", "/users" })
+public class MemberServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+}

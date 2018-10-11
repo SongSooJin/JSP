@@ -1,0 +1,7 @@
+package com.example.filter;
+
+public class EncodingFilter implements filter {
+
+
+	
+}

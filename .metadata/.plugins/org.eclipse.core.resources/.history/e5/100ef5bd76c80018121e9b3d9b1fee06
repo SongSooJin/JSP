@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<% 
+		request.setAttribute("message", "Hello World!");
+		String title = (String) request.getAttribute("message");
+	%>
+	
+	<h3>show-data.jsp</h3>
+	<!-- http://localhost:8080/5-jsp-basic/show-data.jsp -->
+		
+	<p><%out.print(title);%></p>
+	<p><%=title%></p>
+	<hr>
+	<p>${title } </p>
+	<p>${message } </p>
+	
+	
+</body>
+</html>

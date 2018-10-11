@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="java.util.List,java.util.ArrayList"%>
+<%@ page import="com.example.vo.User"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<%
+	User user1 = new User(1, "Tom", "Cruise", true);
+	User user2 = new User(2, "John", "Cruise", true);
+	User user3 = new User(3, "Tom", "Cruise", true);
+
+	List<User> users = new ArrayList<User>();
+	users.add(new User(1, "Tom", "Cruise", true));
+	users.add(new User(2, "John", "Cruise", true));
+	users.add(new User(3, "Tom", "Cruise", true));
+
+	request.setAttribute("users", users);
+%>
+<body>
+
+<p>1 ${user1.firtstName }</p>
+<p>2 ${user2.firtstName }</p>
+<p>3 ${user3.firtstName }</p>
+<p>4 ${user3.size }</p>
+
+</body>
+</html>

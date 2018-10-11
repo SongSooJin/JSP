@@ -1,0 +1,17 @@
+package com.example.demo.dao;
+
+// 디비와 대화하는 클래스는 관습적으로 인터페이스를 두고 구현 클래스를 따로 작성한다.
+// 왜냐하면, 연동하는 디비가 자주 변경되기 때문이다.
+// DAO(Data Access Object)
+public interface EmpDao {
+	public int insert(Emp emp);
+	public int update(Emp emp);
+	public int delete(Emp emp);
+	
+	public int count();
+	public int List<Emp> findAll(Emp emp);
+	public int Emp findOne(int empno);
+	
+	
+	
+}

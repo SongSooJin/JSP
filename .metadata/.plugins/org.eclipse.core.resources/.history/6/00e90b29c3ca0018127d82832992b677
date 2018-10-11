@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="java.util.List,java.util.ArrayList"%>
+<%@ page import="com.example.vo.User"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<%
+	List<User> users = new ArrayList<User>();
+	users.add(new User(1, "Tom", "Cruise", true));
+	users.add(new User(2, "John", "Cruise", true));
+	users.add(new User(3, "Tom", "Cruise", true));
+
+	request.setAttribute("users", users);
+%>
+<body>
+
+	<%
+		for(User user : users) {
+			out.print("<ul>");
+			out.print("<li>"+user.getId()+"</li>");
+			out.print("<li>"+user.getFirstName()+" "+user.getLastName()+"</li>");
+			out.print("<li>"+user.isActive()+"</li>");
+			out.print("</ul>");
+		}
+	%>
+	<hr>
+	
+	<c:forEach var="user" items="${users}">
+		<ul>
+			<li></li>
+		</ul>
+	</c:forEach>
+	
+</body>
+</html>

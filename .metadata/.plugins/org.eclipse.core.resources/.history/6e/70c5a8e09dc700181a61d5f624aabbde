@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>Hello world</h1>
+	<ul>
+		<li><a href="UserServlet">UserServlet</a></li>
+		<li><a href="users">users</a></li>
+		<li><a href="showMeTheMoney">URL 패턴이 일치하는 정보가 없는 경우</a></li>
+	</ul>
+</body>
+
+</html>

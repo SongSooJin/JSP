@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.Enumeration" %>    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<% 
+	String name = request.getParameter("name");
+	Enumeration<String> enumer = request.getParameterNames();
+%>
+	<p><%= name %></p>
+	
+<%
+	while(enumer.hasMoreElments()) {
+		String key = enumer.nextElments();
+	}
+
+%>	
+</body>
+</html>

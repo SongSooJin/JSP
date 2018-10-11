@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%-- 
+    a.ts == 트랜스파일링 ==> a.js ===> html 임포트 ====> 브라우저
+    a.jsp ====> a.java ====> a.class ====> new a() ====> 서블릿 컨테이너 ====> 기동,응답 
+   --%>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+        <title>Insert title here</title>
+      </head>
+      <body></body>
+    </html>

@@ -1,0 +1,44 @@
+package com.example.login;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+// http://localhost:8080/2-sesstion-login/ ===> "/" 매칭됩니다.
+
+@WebServlet({ "/member-only-data" })
+public class MemberServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		
+		HttpSession session = req.getSession();
+		if (session.getAttribute("loginUsers") == null) {
+			// 회원이 아니면 요청한 정보 대신 로그인 화면을 전달한다.
+			
+		} else {
+			// 회원이면 요청한 정보를 보여준다.
+			String path = "/WEB-INF/views/member-only-data.jsp";
+			req.getRequestDispatcher(path).forward(req, res);
+		}
+		
+		
+		
+		
+		
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(req, res);
+	}
+}
+
+	

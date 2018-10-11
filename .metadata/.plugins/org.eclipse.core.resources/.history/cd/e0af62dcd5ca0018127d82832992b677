@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	- 현재 컨텍스트명이 javaweb 
+	- 클릭시 http://localhost:8080/javaweb/jsp/first.jsp 로 이동
+	<a href="<c:url value='/jsp/first.jsp'/>">JSP</a>
+	<br> - 클릭시 컨텍스트 루트(http://localhost:8080/javaweb/)로 이동.
+	<a href="<c:url value='/' />">COntext Root(/)</a>
+</body>
+</html>

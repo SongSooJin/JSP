@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>직원 정보</title>
+</head>
+<body>
+  <%
+  
+   %>
+ <h1>직원 정보</h1>
+ <table>
+   <thead>
+     <tr>
+       <th>No</th>
+       <th>Name</th>
+       <th>Job</th>
+       <th>Salary</th>
+     </tr>
+     <tbody>
+       <tr>
+         <td></td>
+       </tr>
+     </tbody>
+   </thead>
+ </table>
+
+</body>
+</html>

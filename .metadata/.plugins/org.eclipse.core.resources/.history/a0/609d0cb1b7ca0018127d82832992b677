@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<jsp:useBean id="user" class="com.example.vo.User" scope="page">
+		<%--
+		<jsp:setProperty name="user" property="id"/>
+		<jsp:setProperty name="user" property="firstName"/>
+		<jsp:setProperty name="user" property="lastName"/>
+		<jsp:setProperty name="user" property="active"/>
+		--%> 
+		<jsp:setProperty name="user" property=""/>
+	</jsp:useBean>
+	
+	<ul>
+		<li><%=user.getId() %></li>
+		<li><%=user.getFirstName() %></li>
+		<li><%=user.getLastName() %></li>
+		<li><%=user.isActive() %></li>
+	</ul>
+</body>
+</html>

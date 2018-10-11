@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>5-jsp-basic</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<session-config>
+		<!-- 디폴트 값 30분 그대로 적용 -->
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/example3/404.jsp</location>
+	</error-page>
+	<!-- 다른 곳에서 예외를 처리하지 않은 경우, 최후에 다음 설정이 적용됩니다. -->
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/example3/500.jsp</location>
+	</error-page>
+
+	<!-- <jsp-config> <jsp-property-group> <description>jsp page encoding</description> 
+		<display-name>Encoding</display-name> <url-pattern>*.jsp</url-pattern> <el-ignored>false</el-ignored> 
+		<page-encoding>UTF-8</page-encoding> <scripting-invalid>false</scripting-invalid> 
+		<is-xml>false</is-xml> </jsp-property-group> </jsp-config> -->
+
+	<filter>
+		<filter-name>Encoding</filter-name>
+		<filter-class>com.example.filter.EncodingFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>Encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- ServletContext 에게 전달하고 싶은 초기 (전역)파라미터 -->
+	<context-param>
+		<description>초기파라미터1</description>
+		<param-name>was</param-name>
+		<param-value>tomcat</param-value>
+	</context-param>
+	
+	<context-param>
+		<description>초기파라미터2</description>
+		<param-name>version</param-name>
+		<param-value>8.0</param-value>
+	</context-param>
+	
+</web-app>

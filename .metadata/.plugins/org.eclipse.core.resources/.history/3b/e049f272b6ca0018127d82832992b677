@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="use-bean-receive.jsp">
+		<imput type="text" name="id" value="10"><br>
+		<imput type="text" name="firstName" value="Tom"><br>
+		<imput type="text" name="lastName" value="Cruise"><br>
+		<imput type="checkbox" name="active" value="checked"><br>
+		<imput type="submit" name="" value=""><br>
+	</form>
+
+</body>
+</html>

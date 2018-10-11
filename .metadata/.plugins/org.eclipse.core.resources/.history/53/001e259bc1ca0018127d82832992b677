@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ pade import="java.util.List,java.util.Arraulist" %>	
+<%@ pade import="com.example.vo.User" %>	
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<%
+	List<User> users = new ArrayList<User>();
+	users.add(new User(1, "Tom", "Cruise", true));
+	users.add(new User(1, "John", "Cruise", true));
+	users.add(new User(1, "Tom", "Cruise", true));
+
+	req.setAttribute("users", users);
+%>
+<body>
+
+</body>
+</html>

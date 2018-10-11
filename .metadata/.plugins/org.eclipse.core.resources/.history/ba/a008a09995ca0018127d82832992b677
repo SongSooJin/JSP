@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="java.io.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%
+		int count;
+
+		public void jspInit() {
+			try {
+		FileReader fr = new FileReader("c:\\program files\\allaire\\jrun\\jsp\\myCounter.dat");
+		BufferedReader br = new BufferedReader(fr);
+		String initial = br.readLine();
+		count = Integer.parseInt(initial);
+		return;
+			} catch (FileNotFoundException ignored) {
+			} catch (IOException ignored) {
+			} catch (NumberFormatException ignored) {
+			}
+
+			String initial = getInitParameter("initial"); //초기 파라미터에서 확인     
+			try {
+		count = Integer.parseInt(initial);
+		return;
+			} catch (NumberFormatException ignored) {
+			}
+			count = 0;
+		}
+
+		public void jspDestroy() { //JSP Instance가 소멸시 카운터 값을 파일에 저장     
+			saveState();
+		}
+
+		public void saveState() {
+			try {
+		FileWriter fw = new FileWriter("C:\Users\TopC290\Documents\SONG\JSP\5-jsp-basic\myCount.dat");
+		String initial = Integer.toString(count);
+		fw.write(initial, 0, initial.length());
+		 fw.close();               
+		 return;     
+		 }     
+			catch (IOException e) {     
+				
+			}  
+			} 
+		
+	%>
+
+</body>
+</html>
